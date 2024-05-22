@@ -1,0 +1,95 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: url('background.jpg') no-repeat center center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+.header {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+}
+
+.logo {
+    display: block;
+    font-size: 18px;
+    border: 2px solid white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.navbar {
+    display: flex;
+    gap: 10px;
+}
+
+.nav-button {
+    font-size: 16px;
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    border: 2px solid white;
+    border-radius: 5px;
+    transition: background 0.3s, color 0.3s;
+}
+
+.nav-button:hover {
+    background: white;
+    color: black;
+}
+
+.content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.title {
+    font-size: 120px;
+    font-weight: bold;
+    margin: 0;
+    line-height: 1;
+}
+
+.subtitle {
+    font-size: 24px;
+    letter-spacing: 5px;
+    margin: 0;
+}
+
+.footer {
+    position: absolute;
+    bottom: 20px;
+    text-align: center;
+}
+
+.presented {
+    font-size: 16px;
+    margin: 0;
+}
+
+.name {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0;
+}

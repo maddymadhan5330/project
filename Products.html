@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products - Agrifarm</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .button-container {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .button-container .nav-button {
+            margin: 0 10px;
+            padding: 10px 20px;
+            background-color: #4ca1af;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .button-container .nav-button:hover {
+            background-color: #3e8e41;
+        }
+        .content {
+            margin-top: 20px;
+        }
+        .content h2 {
+            margin-top: 0;
+            font-size: 24px;
+        }
+        .section-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        .section-container section {
+            width: 45%;
+            margin: 20px 0;
+        }
+        figure {
+            text-align: center;
+        }
+        figcaption {
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <span class="logo">AgroCraft</span>
+            <nav class="navbar">
+                <a href="Homepage.html" class="nav-button">Home</a>
+                <a href="products.html" class="nav-button">Products</a>
+                <a href="about.html" class="nav-button">About Us</a>
+                <a href="services.html" class="nav-button">Services</a>
+                <a href="contact.html" class="nav-button">Contact</a>
+                <a href="cart.html" class="nav-button">Cart</a>
+            </nav>
+        </div>
+        <div class="button-container">
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <a href="vegetable.html" class="nav-button">Vegetables</a>
+            <a href="fruits.html" class="nav-button">Fruits</a>
+            <a href="search" class="nav-button">Search</a>
+        </div>
+        <div class="content">
+            <div class="section-container">
+                <section id="vegetables">
+                    <h2>Vegetables</h2>
+                    <figure>
+                        <img src="pumpkin.jpg" alt="Various vegetables including tomatoes, lettuce, and carrots" width="200" height="150">
+                        <figcaption>Fresh vegetables from our farm.</figcaption>
+                    </figure>
+                </section>
+                <section id="fruits">
+                    <h2>Fruits</h2>
+                    <figure>
+                        <img src="vf2.png" alt="Various fruits including apples, oranges, and bananas" width="200" height="150">
+                        <figcaption>Fresh fruits from our orchards.</figcaption>
+                    </figure>
+                </section>
+            </div>
+            <section id="search">
+                <h2>Search</h2>
+                <input type="text" id="search-box" placeholder="Search for products...">
+                <button id="search-btn">Search</button>
+                <div id="search-results"></div>
+            </section>
+        </div>
+        <div class="footer">
+            <p class="presented">Here To Create A</p>
+            <p class="name">FRESH PLANET</p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

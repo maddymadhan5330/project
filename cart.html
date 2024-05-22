@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart - Agrifarm</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <span class="logo">AgroCraft</span>
+            <nav class="navbar">
+                <a href="Homepage.html" class="nav-button">Home</a>
+                <a href="products.html" class="nav-button">Products</a>
+                <a href="about.html" class="nav-button">About Us</a>
+                <a href="services.html" class="nav-button">Services</a>
+                <a href="contact.html" class="nav-button">Contact</a>
+                    <a href="cart.html" class="nav-button">Cart</a>
+                </nav>
+            </div>
+            <div class="container">
+                <section class="cart">
+                    <h2>Your Cart</h2>
+                    <div id="cart-items"></div>
+                    <p>Total: ₹. <span id="total-price">0.00</span></p>
+                    <button onclick="checkout()">Checkout</button>
+                </section>
+            </div>
+            <footer>
+                <br><br>
+                <br><br>
+                <p>&copy; 2024 AgroCraft. All rights reserved.</p>
+            </footer>
+            <script>
+                const cartItems = JSON.parse(localStorage.getItem('cart')) || [];
+        
+                function renderCart() {
+                    const cartContainer = document.getElementById('cart-items');
+                    cartContainer.innerHTML = '';
+                    let totalPrice = 0;
+                    cartItems.forEach((item, index) => {
+                        const itemElement = document.createElement('div');
+                        itemElement.innerHTML = `
+                            <p>${item.name} - Rs. ${item.price.toFixed(2)} x ${item.quantity}</p>
+                            <button onclick="removeItem(${index})">Remove</button>
+                        `;
+                        cartContainer.appendChild(itemElement);
+                        totalPrice += item.price * item.quantity;
+                    });
+                    document.getElementById('total-price').textContent = totalPrice.toFixed(2);
+                }
+        
+                function removeItem(index) {
+                    cartItems.splice(index, 1);
+                    localStorage.setItem('cart', JSON.stringify(cartItems));
+                    renderCart();
+                }
+        
+                function checkout() {
+                    if (cartItems.length === 0) {
+                        alert('Your cart is empty!');
+                        return;
+                    }
+                    alert('Checkout process initiated!');
+                    localStorage.removeItem('cart');
+                    renderCart();
+                }
+        
+                renderCart();
+            </script>
+            <div class="footer">
+                <p class="presented">Here To Create A</p>
+                <p class="name">FRESH PLANET</p>
+            </div>
+        </div>
+        <script src="script.js"></script>
+    </body>
+    </html>
+    
